@@ -18,20 +18,20 @@ const objections = [
 
 const ObjectionsSection = () => {
   return (
-    <section className="bg-card px-4 py-16">
-      <div className="container mx-auto max-w-3xl">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-foreground text-center mb-10">
+    <section className="bg-card px-4 py-14">
+      <div className="container mx-auto max-w-lg">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground text-center mb-8">
           🧠 Talvez você esteja pensando...
         </h2>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {objections.map((obj, i) => (
-            <div key={i} className="bg-surface-blue rounded-2xl p-6 shadow-card border border-border">
+            <div key={i} className="bg-surface-blue rounded-2xl p-5 shadow-card border-2 border-primary/10">
               <div className="flex items-start gap-4">
                 <span className="text-3xl">{obj.icon}</span>
                 <div>
                   <p className="font-bold text-foreground mb-1">{obj.question}</p>
-                  <p className="text-muted-foreground">{obj.answer}</p>
+                  <p className="text-muted-foreground text-sm">{obj.answer}</p>
                 </div>
               </div>
             </div>
