@@ -58,6 +58,11 @@ export default {
         "surface-blue": "hsl(var(--surface-blue))",
         "surface-green": "hsl(var(--surface-green))",
         "surface-warm": "hsl(var(--surface-warm))",
+        "surface-cyan": "hsl(var(--surface-cyan))",
+        highlight: {
+          DEFAULT: "hsl(var(--highlight))",
+          foreground: "hsl(var(--highlight-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

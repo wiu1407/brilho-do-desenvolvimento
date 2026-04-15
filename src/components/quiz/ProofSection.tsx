@@ -22,24 +22,24 @@ const proofs = [
 
 const ProofSection = () => {
   return (
-    <section className="bg-surface-green px-4 py-16">
-      <div className="container mx-auto max-w-4xl">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-foreground text-center mb-10">
+    <section className="bg-surface-green px-4 py-14">
+      <div className="container mx-auto max-w-lg">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground text-center mb-8">
           📸 Como funciona na prática
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="space-y-4">
           {proofs.map((proof, i) => (
-            <div key={i} className="bg-card rounded-2xl shadow-card overflow-hidden">
+            <div key={i} className="bg-card rounded-2xl shadow-vivid overflow-hidden border-2 border-secondary/30">
               <img
                 src={proof.image}
                 alt={proof.after}
                 loading="lazy"
                 width={640}
                 height={512}
-                className="w-full aspect-square object-cover"
+                className="w-full aspect-video object-cover"
               />
-              <div className="p-5 space-y-2">
+              <div className="p-4 space-y-2">
                 <p className="text-sm text-destructive font-semibold">❌ Antes: {proof.before}</p>
                 <p className="text-sm text-secondary-foreground font-semibold">✅ Depois: {proof.after}</p>
               </div>
@@ -48,14 +48,14 @@ const ProofSection = () => {
         </div>
 
         {/* Mini testimonials */}
-        <div className="mt-12 grid md:grid-cols-2 gap-4">
+        <div className="mt-10 space-y-3">
           {[
             { name: "Maria S.", text: "Meu filho começou a usar os cartões e em 3 dias já pedia água sozinho!" },
             { name: "Ana P.", text: "A rotina visual mudou nossas manhãs. Menos crises, menos estresse." },
             { name: "Carla R.", text: "Nunca imaginei que algo tão simples faria tanta diferença." },
             { name: "Juliana M.", text: "Meu filho com TDAH está muito mais focado com as atividades do kit." },
           ].map((t, i) => (
-            <div key={i} className="bg-card rounded-xl p-4 shadow-card border border-border">
+            <div key={i} className="bg-card rounded-2xl p-4 shadow-card border border-primary/10">
               <p className="text-foreground text-sm italic">"{t.text}"</p>
               <p className="text-muted-foreground text-xs mt-2 font-bold">— {t.name}</p>
             </div>

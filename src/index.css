@@ -7,44 +7,48 @@
 @layer base {
   :root {
     --background: 210 100% 97%;
-    --foreground: 220 30% 20%;
+    --foreground: 220 40% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 20%;
+    --card-foreground: 220 40% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 20%;
+    --popover-foreground: 220 40% 15%;
 
-    --primary: 210 80% 55%;
+    --primary: 220 85% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 135 40% 92%;
-    --secondary-foreground: 150 30% 25%;
+    --secondary: 170 55% 88%;
+    --secondary-foreground: 170 50% 25%;
 
-    --muted: 210 30% 94%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 215 30% 92%;
+    --muted-foreground: 220 15% 40%;
 
-    --accent: 135 40% 92%;
-    --accent-foreground: 150 30% 25%;
+    --accent: 260 60% 92%;
+    --accent-foreground: 260 50% 30%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 80% 58%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 30% 90%;
-    --input: 210 30% 90%;
-    --ring: 210 80% 55%;
+    --border: 215 30% 88%;
+    --input: 215 30% 88%;
+    --ring: 220 85% 55%;
 
     --radius: 1rem;
 
-    --surface-blue: 210 100% 97%;
-    --surface-green: 135 60% 95%;
-    --surface-warm: 40 100% 97%;
+    --surface-blue: 215 100% 96%;
+    --surface-green: 170 60% 94%;
+    --surface-warm: 260 50% 96%;
+    --surface-cyan: 190 80% 94%;
 
-    --cta: 25 95% 55%;
+    --cta: 160 70% 42%;
     --cta-foreground: 0 0% 100%;
-    --cta-hover: 25 95% 48%;
+    --cta-hover: 160 70% 36%;
 
-    --quiz-progress: 210 80% 55%;
+    --quiz-progress: 220 85% 55%;
+
+    --highlight: 280 65% 60%;
+    --highlight-foreground: 0 0% 100%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -72,9 +76,18 @@
 
 @layer utilities {
   .shadow-soft {
-    box-shadow: 0 4px 20px -4px hsl(210 80% 55% / 0.12);
+    box-shadow: 0 4px 24px -4px hsl(220 85% 55% / 0.18);
   }
   .shadow-card {
-    box-shadow: 0 2px 12px -2px hsl(220 30% 20% / 0.08);
+    box-shadow: 0 2px 16px -2px hsl(220 40% 15% / 0.08);
+  }
+  .shadow-vivid {
+    box-shadow: 0 6px 30px -6px hsl(220 85% 55% / 0.25);
+  }
+  .gradient-cool {
+    background: linear-gradient(135deg, hsl(220 85% 55%), hsl(260 65% 60%), hsl(190 80% 50%));
+  }
+  .gradient-cta {
+    background: linear-gradient(135deg, hsl(160 70% 42%), hsl(170 65% 48%));
   }
 }
