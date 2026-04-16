@@ -72,7 +72,7 @@
     /* Cores do espectro TEA com saturação máxima e luminosidade ajustada para serem extremamente vivas e coloridas */
     background: linear-gradient(-45deg, hsl(195 100% 65%), hsl(220 100% 70%), hsl(45 100% 60%), hsl(340 100% 70%));
     background-size: 400% 400%;
-    animation: gradient-shift 15s ease infinite;
+    animation: gradient-shift 6s ease infinite;
     @apply text-foreground;
     font-family: 'Nunito', sans-serif;
   }
