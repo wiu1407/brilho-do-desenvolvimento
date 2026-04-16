@@ -1,21 +1,11 @@
-const items = [
-  { icon: "🗣️", title: "Cartões de Comunicação (CAA)", desc: "Para seu filho expressar necessidades mesmo sem fala", featured: true },
-  { icon: "📋", title: "Rotina Visual Estruturada", desc: "Quadros de manhã, tarde e noite que reduzem crises", featured: false },
-  { icon: "🧠", title: "Atividades Cognitivas", desc: "Exercícios que estimulam raciocínio e aprendizado", featured: false },
-  { icon: "🎯", title: "Exercícios de Atenção (TDAH)", desc: "Atividades específicas para melhorar o foco", featured: false },
-  { icon: "💛", title: "Regulação Emocional", desc: "Materiais para ajudar a criança a lidar com emoções", featured: false },
-  { icon: "📖", title: "Guias para Pais", desc: "Passo a passo simples para aplicar em casa", featured: false },
-];
-
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Music, Video, Brain, PlayCircle, HardDriveDownload } from "lucide-react";
 
 const deliverables = [
-  "Cartões de comunicação",
-  "Rotina visual estruturada",
-  "Atividades cognitivas",
-  "Exercícios para foco (TDAH)",
-  "Regulação emocional",
-  "Guias práticos para pais",
+  { text: "Aulinhas guiadas com o Professor Pipo", icon: <Video className="w-5 h-5 text-primary" /> },
+  { text: "Desenhos animados com personagens do alfabeto", icon: <PlayCircle className="w-5 h-5 text-primary" /> },
+  { text: "Alfabetização musical estruturada", icon: <Music className="w-5 h-5 text-primary" /> },
+  { text: "Materiais complementares de apoio (PDF)", icon: <HardDriveDownload className="w-5 h-5 text-primary" /> },
+  { text: "Tarefas para exercitar memorização", icon: <Brain className="w-5 h-5 text-primary" /> },
 ];
 
 const ProductPresentation = () => {
@@ -23,21 +13,25 @@ const ProductPresentation = () => {
     <section className="bg-background px-4 py-16">
       <div className="container mx-auto max-w-2xl">
         <div className="text-center space-y-4 mb-10">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground">
-            O que está incluso no material completo:
+          <h2 className="text-2xl md:text-3xl font-black text-foreground">
+            O que é o <span className="text-primary">Método NeuroOctoMusical™?</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Tudo o que você precisa para estimular o seu filho de forma estruturada.
+            Um método que ativa simultaneamente até <strong className="text-foreground">8 estímulos do cérebro infantil</strong> usando som, ritmo e imagem em conjunto para facilitar a leitura e escrita.
           </p>
         </div>
 
-        <div className="space-y-3">
-          {deliverables.map((item, index) => (
-            <div key={index} className="flex items-center gap-4 bg-card border border-border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all">
-              <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-              <p className="font-bold text-foreground text-lg">{item}</p>
-            </div>
-          ))}
+        <div className="bg-surface-blue p-6 rounded-[2rem] border border-border shadow-soft mb-8 text-center">
+          <h3 className="text-xl font-bold mb-4">Tudo o que você recebe por dentro:</h3>
+          <div className="space-y-3 flex flex-col items-center">
+            {deliverables.map((item, index) => (
+              <div key={index} className="flex items-center gap-3 w-full sm:w-11/12 bg-white/60 p-4 rounded-xl">
+                {item.icon}
+                <p className="font-bold text-foreground text-left flex-1">{item.text}</p>
+                <CheckCircle className="w-5 h-5 text-green-500 opacity-60" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
