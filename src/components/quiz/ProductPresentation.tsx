@@ -7,14 +7,19 @@ const items = [
   { icon: "📖", title: "Guias para Pais", desc: "Passo a passo simples para aplicar em casa", featured: false },
 ];
 
+import { CheckCircle2 } from "lucide-react";
+
+const deliverables = [
+  "Cartões de comunicação",
+  "Rotina visual estruturada",
+  "Atividades cognitivas",
+  "Exercícios para foco (TDAH)",
+  "Regulação emocional",
+  "Guias práticos para pais",
+];
+
 const ProductPresentation = () => {
   return (
-    <section className="bg-card px-4 py-14">
-      <div className="container mx-auto max-w-lg">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground text-center mb-3">
-          🧩 O que você recebe
-        </h2>
-        <p className="text-muted-foreground text-center mb-8 text-base sm:text-lg">
           Tudo que você precisa para começar a estimular seu filho em casa
         </p>
 

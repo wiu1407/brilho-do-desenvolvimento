@@ -3,10 +3,10 @@ import HeroSection from "@/components/quiz/HeroSection";
 import QuizSection from "@/components/quiz/QuizSection";
 import TransitionScreen from "@/components/quiz/TransitionScreen";
 import ResultSection from "@/components/quiz/ResultSection";
-import PatternBreak from "@/components/quiz/PatternBreak";
-import ProductSection from "@/components/quiz/ProductSection";
+import ProductDemonstration from "@/components/quiz/ProductDemonstration";
 import VSLSection from "@/components/quiz/VSLSection";
 import ProductPresentation from "@/components/quiz/ProductPresentation";
+import BonusSection from "@/components/quiz/BonusSection";
 import ProofSection from "@/components/quiz/ProofSection";
 import ObjectionsSection from "@/components/quiz/ObjectionsSection";
 import CTASection from "@/components/quiz/CTASection";
@@ -41,10 +41,10 @@ const Index = () => {
       {stage === "result" && (
         <>
           <ResultSection />
-          <PatternBreak />
-          <ProductSection />
+          <ProductDemonstration />
           <VSLSection />
           <ProductPresentation />
+          <BonusSection />
           <ProofSection />
           <ObjectionsSection />
           <CTASection />

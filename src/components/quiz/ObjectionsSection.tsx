@@ -1,41 +1,37 @@
-const objections = [
-  {
-    question: '"Não tenho experiência com isso"',
-    answer: "O material vem com guia passo a passo. Qualquer pai ou mãe consegue aplicar, mesmo sem formação.",
-    icon: "📖",
-  },
-  {
-    question: '"Não tenho tempo"',
-    answer: "As atividades são curtas — de 5 a 15 minutos. Dá para encaixar na rotina do dia a dia.",
-    icon: "⏰",
-  },
-  {
-    question: '"Meu filho não vai aceitar"',
-    answer: "O método é visual e lúdico. Crianças se conectam naturalmente com imagens e cores.",
-    icon: "🎨",
-  },
-];
+import { ShieldCheck, Clock, Smile } from "lucide-react";
 
 const ObjectionsSection = () => {
   return (
-    <section className="bg-card px-4 py-14">
-      <div className="container mx-auto max-w-lg">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground text-center mb-8">
-          🧠 Talvez você esteja pensando...
+    <section className="bg-background px-4 py-16">
+      <div className="container mx-auto max-w-3xl">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-foreground text-center mb-10">
+          Feito para pais reais como você
         </h2>
-
-        <div className="space-y-3">
-          {objections.map((obj, i) => (
-            <div key={i} className="bg-surface-blue rounded-2xl p-5 shadow-card border-2 border-primary/10">
-              <div className="flex items-start gap-4">
-                <span className="text-3xl">{obj.icon}</span>
-                <div>
-                  <p className="font-bold text-foreground mb-1">{obj.question}</p>
-                  <p className="text-muted-foreground text-sm">{obj.answer}</p>
-                </div>
-              </div>
+        
+        <div className="space-y-6">
+          <div className="bg-surface-blue p-6 rounded-3xl flex items-start gap-4">
+            <ShieldCheck className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+            <div>
+              <h4 className="font-bold text-lg">"Não tenho experiência na área"</h4>
+              <p className="text-muted-foreground">Tudo é 100% guiado. O material foi feito para mães e pais, não profissionais. Você pega e aplica na hora.</p>
             </div>
-          ))}
+          </div>
+          
+          <div className="bg-surface-green p-6 rounded-3xl flex items-start gap-4">
+            <Clock className="w-8 h-8 text-accent-foreground flex-shrink-0 mt-1" />
+            <div>
+              <h4 className="font-bold text-lg">"Não tenho muito tempo livre"</h4>
+              <p className="text-muted-foreground">Requer apenas de 10 a 15 minutos por dia de aplicação prática para já notar diferença no comportamento e rotina.</p>
+            </div>
+          </div>
+          
+          <div className="bg-surface-cyan/30 p-6 rounded-3xl flex items-start gap-4">
+            <Smile className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+            <div>
+              <h4 className="font-bold text-lg">"Meu filho pode não aceitar"</h4>
+              <p className="text-muted-foreground">O design é extremamente lúdico e construído em parceria visual. Para eles, será mais como uma brincadeira.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

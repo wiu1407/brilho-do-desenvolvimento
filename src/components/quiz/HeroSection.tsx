@@ -6,34 +6,32 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onStart }: HeroSectionProps) => {
   return (
-    <section className="min-h-screen flex items-center bg-transparent px-4 py-8">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center space-y-6 bg-white/90 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] shadow-2xl border-4 border-white/50 flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-sm font-bold">
-            🧩 Quiz rapidinho: só 2 minutos!
+    <section className="min-h-screen flex items-center bg-background px-4 py-8">
+      <div className="container mx-auto max-w-6xl">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+          <div className="flex-1 text-center md:text-left space-y-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight">
+              Seu filho pode estar com dificuldades no desenvolvimento — <span className="text-primary">e você ainda não percebeu?</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+              Responda algumas perguntas rápidas e veja exatamente o que pode estar acontecendo e como ajudar na prática
+            </p>
+            <button
+              onClick={onStart}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 gradient-cta text-cta-foreground font-bold text-xl px-10 py-6 rounded-2xl shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Começar diagnóstico
+            </button>
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight max-w-3xl mx-auto">
-            Seu pequeno está com dificuldade para <span className="text-primary">se expressar</span>, <span className="text-highlight">prestar atenção</span> ou seguir a <span className="text-primary">rotina</span>?
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Vamos investigar juntos o que pode estar atrapalhando o dia a dia dele — e descobrir como você pode ajudar de um jeito super prático em casa!
-          </p>
-          <div className="w-full flex justify-center mt-4 mb-4">
+          <div className="flex-1 w-full max-w-md mx-auto">
             <img
               src={heroImage}
-              alt="Mãe ajudando criança a se comunicar"
+              alt="Mãe com criança"
               width={800}
               height={800}
-              className="rounded-3xl shadow-vivid w-full max-w-sm border-4 border-primary/20 aspect-square object-cover"
+              className="rounded-[2.5rem] shadow-2xl w-full object-cover border-[6px] border-white"
             />
           </div>
-          <button
-            onClick={onStart}
-            className="w-full max-w-md mx-auto sm:w-auto inline-flex items-center justify-center gap-2 gradient-cta text-cta-foreground font-bold text-lg px-8 py-5 rounded-2xl shadow-vivid transition-all duration-300 animate-pulse-gentle hover:scale-105"
-          >
-            ✨ Começar o Quiz gratuito
-          </button>
-          <p className="text-sm text-muted-foreground font-bold">✅ Gratuito • Leva apenas 2 minutinhos</p>
         </div>
       </div>
     </section>

@@ -1,39 +1,61 @@
+import { useState, useRef, useEffect } from "react";
+import { VolumeX, Volume2 } from "lucide-react";
+
 const VSLSection = () => {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(e => console.log("Video autoplay failed", e));
+    }
+  }, []);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
   return (
-    <section className="bg-white/20 backdrop-blur-lg px-4 py-14">
-      <div className="container mx-auto max-w-lg text-center space-y-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground">
-          🎥 Veja como funciona na prática
-        </h2>
-
-        <div className="aspect-video bg-foreground/5 rounded-3xl shadow-vivid overflow-hidden border-2 border-primary/20 relative">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center space-y-3">
-              <div className="w-20 h-20 mx-auto gradient-cta rounded-full flex items-center justify-center shadow-vivid cursor-pointer hover:scale-110 transition-transform active:scale-95">
-                <span className="text-cta-foreground text-3xl ml-1">▶</span>
-              </div>
-              <p className="text-muted-foreground font-semibold text-sm">Assista ao vídeo explicativo</p>
+    <section className="bg-background px-4 py-16">
+      <div className="container mx-auto max-w-3xl text-center space-y-8">
+        <div className="relative aspect-video bg-black rounded-3xl shadow-2xl overflow-hidden border-4 border-border">
+          {/* Simulated Video Element */}
+          <video 
+            ref={videoRef}
+            className="w-full h-full object-cover opacity-80"
+            src="https://www.w3schools.com/html/mov_bbb.mp4" 
+            autoPlay 
+            loop 
+            muted={isMuted} 
+            playsInline
+          />
+          
+          {isMuted && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-[2px]">
+              <p className="text-white font-bold text-lg md:text-2xl mb-4 text-center px-4 drop-shadow-md">
+                Seu vídeo já começou. <br/> Clique para ouvir com áudio.
+              </p>
+              <button 
+                onClick={toggleMute}
+                className="inline-flex items-center gap-3 bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform"
+              >
+                <VolumeX className="w-6 h-6" />
+                ATIVAR SOM
+              </button>
             </div>
-          </div>
-        </div>
-
-        <div className="bg-card rounded-3xl shadow-card p-5 text-left space-y-3 border border-border">
-          <div className="flex items-start gap-3">
-            <span className="text-2xl">😔</span>
-            <p className="text-foreground text-sm sm:text-base">"Se seu filho não consegue se comunicar ou focar, você sabe o quanto isso pesa"</p>
-          </div>
-          <div className="flex items-start gap-3">
-            <span className="text-2xl">💡</span>
-            <p className="text-foreground text-sm sm:text-base">"O problema não é seu filho — é a falta de um método correto"</p>
-          </div>
-          <div className="flex items-start gap-3">
-            <span className="text-2xl">🧩</span>
-            <p className="text-foreground text-sm sm:text-base">"Um sistema visual + cognitivo + rotina estruturada que qualquer família pode usar"</p>
-          </div>
-          <div className="flex items-start gap-3">
-            <span className="text-2xl">🌟</span>
-            <p className="text-foreground font-bold text-sm sm:text-base">"Seu filho começa a entender, se comunicar e se organizar melhor"</p>
-          </div>
+          )}
+          
+          {!isMuted && (
+            <button 
+              onClick={toggleMute}
+              className="absolute bottom-4 right-4 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition"
+            >
+              <Volume2 className="w-5 h-5" />
+            </button>
+          )}
         </div>
       </div>
     </section>

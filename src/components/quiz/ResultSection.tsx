@@ -1,20 +1,31 @@
 const ResultSection = () => {
   return (
-    <section className="bg-white/40 backdrop-blur-md px-4 py-14">
-      <div className="container mx-auto max-w-lg text-center space-y-5 animate-fade-in-up">
-        <div className="inline-flex items-center gap-2 bg-destructive/10 text-destructive px-4 py-2 rounded-full text-sm font-bold">
-          ⚠️ Atenção necessária
-        </div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground">
-          Seu filho apresenta sinais de dificuldade em <span className="text-primary">comunicação</span>, <span className="text-highlight">atenção</span> e <span className="text-primary">organização de rotina</span>
-        </h2>
-        <p className="text-base sm:text-lg text-muted-foreground">
-          💛 Isso <strong>não é culpa sua</strong> — muitos pais passam por isso e não sabem como ajudar.
-        </p>
-        <div className="bg-card rounded-2xl shadow-vivid p-5 border-2 border-highlight/20">
-          <p className="text-foreground font-semibold">
-            ⏳ Sem o estímulo correto, isso pode gerar mais frustração, atraso no desenvolvimento e sobrecarga para toda a família.
+    <section className="bg-background px-4 py-16">
+      <div className="container mx-auto max-w-2xl text-center space-y-8 animate-fade-in-up">
+        {/* Diagnóstico */}
+        <div className="bg-card border-2 border-primary/20 rounded-3xl p-6 md:p-8 shadow-lg">
+          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-2xl">📋</span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-4">
+            Com base nas suas respostas, seu filho apresenta sinais de dificuldade em <span className="text-primary">comunicação, atenção e organização de rotina</span>
+          </h2>
+          {/* Emoção */}
+          <p className="text-lg text-muted-foreground font-medium mb-4">
+            Isso não é culpa sua — a maioria dos pais não recebe orientação prática.
           </p>
+          {/* Consequência */}
+          <p className="text-destructive font-bold text-lg bg-destructive/10 inline-block px-4 py-2 rounded-xl">
+            Sem estímulo correto, isso tende a piorar com o tempo.
+          </p>
+        </div>
+
+        {/* Entrada da Solução */}
+        <div className="pt-8">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground">
+            Mas existe uma forma simples de começar a mudar isso ainda hoje, <span className="text-primary">dentro da sua casa</span>
+          </h3>
+          <div className="w-12 h-1 bg-primary rounded-full mx-auto mt-6"></div>
         </div>
       </div>
     </section>

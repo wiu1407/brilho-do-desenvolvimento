@@ -6,58 +6,58 @@
 
 @layer base {
   :root {
-    --background: 45 100% 97%; /* Warm light cream */
-    --foreground: 230 40% 15%;
+    --background: 212 100% 96%; /* #EAF4FF */
+    --foreground: 220 40% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 230 40% 15%;
+    --card-foreground: 220 40% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 230 40% 15%;
+    --popover-foreground: 220 40% 15%;
 
-    --primary: 270 85% 60%; /* Bright Purple */
+    --primary: 212 85% 50%; /* Blue */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 24 100% 55%; /* Bright Orange */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 125 48% 92%; /* #DFF5E1 */
+    --secondary-foreground: 125 60% 25%;
 
-    --muted: 45 40% 90%;
+    --muted: 212 20% 90%;
     --muted-foreground: 220 15% 40%;
 
-    --accent: 330 85% 60%; /* Vivid Pink */
-    --accent-foreground: 0 0% 100%;
+    --accent: 125 48% 92%; /* Light green */
+    --accent-foreground: 220 40% 15%;
 
-    --destructive: 350 80% 58%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 270 30% 90%;
-    --input: 270 30% 90%;
-    --ring: 270 85% 60%;
+    --border: 212 30% 90%;
+    --input: 212 30% 90%;
+    --ring: 212 85% 50%;
 
     --radius: 1.5rem;
 
-    --surface-blue: 210 100% 93%;
-    --surface-green: 150 70% 90%;
-    --surface-warm: 45 100% 90%;
-    --surface-cyan: 190 90% 90%;
+    --surface-blue: 212 100% 96%;
+    --surface-green: 125 48% 92%;
+    --surface-warm: 0 0% 100%;
+    --surface-cyan: 212 50% 94%;
 
-    --cta: 140 70% 45%; /* Vibrant Green */
+    --cta: 140 70% 42%;
     --cta-foreground: 0 0% 100%;
-    --cta-hover: 140 70% 38%;
+    --cta-hover: 140 70% 36%;
 
-    --quiz-progress: 270 85% 60%;
+    --quiz-progress: 140 70% 42%;
 
-    --highlight: 45 95% 55%; /* Bright Yellow */
+    --highlight: 45 95% 55%;
     --highlight-foreground: 230 60% 10%;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 270 85% 60%;
+    --sidebar-primary: 212 85% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 4.8% 95.9%;
-    --sidebar-accent-foreground: 270 85% 60%;
+    --sidebar-accent: 125 48% 92%;
+    --sidebar-accent-foreground: 212 85% 50%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 270 85% 60%;
+    --sidebar-ring: 212 85% 50%;
 
     font-family: 'Nunito', sans-serif;
   }
@@ -69,18 +69,8 @@
   }
 
   body {
-    /* Cores do espectro TEA com saturação máxima e luminosidade ajustada para serem extremamente vivas e coloridas */
-    background: linear-gradient(-45deg, hsl(195 100% 65%), hsl(220 100% 70%), hsl(45 100% 60%), hsl(340 100% 70%));
-    background-size: 400% 400%;
-    animation: gradient-shift 6s ease infinite;
-    @apply text-foreground;
+    @apply bg-background text-foreground;
     font-family: 'Nunito', sans-serif;
-  }
-
-  @keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
   }
 }
 
