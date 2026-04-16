@@ -20,7 +20,7 @@ const ProductSection = () => {
   const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="bg-surface-blue px-4 py-14">
+    <section className="bg-white/40 backdrop-blur-md px-4 py-14">
       <div className="container mx-auto max-w-lg">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground text-center mb-3">
           📦 Conheça o Kit Completo

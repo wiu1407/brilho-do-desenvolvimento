@@ -29,7 +29,7 @@ const TransitionScreen = ({ onComplete }: TransitionScreenProps) => {
   }, [onComplete]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-surface-blue px-4">
+    <section className="min-h-screen flex items-center justify-center bg-transparent px-4">
       <div className="text-center space-y-8">
         {/* Spinner */}
         <div className="w-16 h-16 mx-auto border-4 border-muted border-t-primary rounded-full animate-spin" />

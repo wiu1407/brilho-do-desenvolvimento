@@ -1,6 +1,6 @@
 const ResultSection = () => {
   return (
-    <section className="bg-surface-warm px-4 py-14">
+    <section className="bg-white/40 backdrop-blur-md px-4 py-14">
       <div className="container mx-auto max-w-lg text-center space-y-5 animate-fade-in-up">
         <div className="inline-flex items-center gap-2 bg-destructive/10 text-destructive px-4 py-2 rounded-full text-sm font-bold">
           ⚠️ Atenção necessária

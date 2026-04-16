@@ -22,7 +22,7 @@ const proofs = [
 
 const ProofSection = () => {
   return (
-    <section className="bg-surface-green px-4 py-14">
+    <section className="bg-white/30 backdrop-blur-md px-4 py-14">
       <div className="container mx-auto max-w-lg">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground text-center mb-8">
           📸 Como funciona na prática

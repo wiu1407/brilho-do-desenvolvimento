@@ -1,6 +1,6 @@
 const VSLSection = () => {
   return (
-    <section className="bg-surface-cyan px-4 py-14">
+    <section className="bg-white/20 backdrop-blur-lg px-4 py-14">
       <div className="container mx-auto max-w-lg text-center space-y-6">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground">
           🎥 Veja como funciona na prática

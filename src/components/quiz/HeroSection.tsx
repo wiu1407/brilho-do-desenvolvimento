@@ -6,7 +6,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onStart }: HeroSectionProps) => {
   return (
-    <section className="min-h-screen flex items-center bg-surface-blue px-4 py-8">
+    <section className="min-h-screen flex items-center bg-transparent px-4 py-8">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
           <div className="flex-1 text-center md:text-left space-y-5">

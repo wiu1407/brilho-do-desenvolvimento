@@ -82,7 +82,7 @@ const QuizSection = ({ onComplete }: QuizSectionProps) => {
   };
 
   return (
-    <section className="min-h-screen flex items-center bg-background px-4 py-8">
+    <section className="min-h-screen flex items-center bg-transparent px-4 py-8">
       <div className="container mx-auto max-w-lg">
         {/* Progress */}
         <div className="mb-6">
