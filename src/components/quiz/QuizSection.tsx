@@ -116,9 +116,12 @@ const QuizSection = ({ onComplete }: QuizSectionProps) => {
               <button
                 key={i}
                 onClick={() => handleAnswer(i)}
-                className="w-full text-left px-5 py-4 rounded-2xl border-2 border-primary/15 bg-surface-blue hover:border-primary hover:bg-primary/10 hover:shadow-soft transition-all duration-200 text-foreground font-semibold text-base active:scale-[0.98]"
+                className="w-full text-left px-5 py-4 flex items-center gap-4 rounded-[2rem] border-2 border-green-500/30 bg-green-50 hover:bg-green-100 hover:border-green-500 hover:shadow-soft transition-all duration-200 text-green-950 font-bold text-base active:scale-[0.98]"
               >
-                {option}
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white text-lg shadow-sm">
+                  {i + 1}
+                </div>
+                <span>{option}</span>
               </button>
             ))}
           </div>

@@ -19,6 +19,15 @@ const HeroSection = ({ onStart }: HeroSectionProps) => {
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
               Vamos investigar juntos o que pode estar atrapalhando o dia a dia dele — e descobrir como você pode ajudar de um jeito super prático em casa!
             </p>
+            <div className="w-full flex justify-center md:justify-start">
+              <img
+                src={heroImage}
+                alt="Mãe ajudando criança a se comunicar"
+                width={800}
+                height={800}
+                className="rounded-3xl shadow-vivid w-full max-w-sm border-4 border-primary/20 mb-2"
+              />
+            </div>
             <button
               onClick={onStart}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 gradient-cta text-cta-foreground font-bold text-lg px-8 py-5 rounded-2xl shadow-vivid transition-all duration-300 animate-pulse-gentle"
@@ -26,15 +35,6 @@ const HeroSection = ({ onStart }: HeroSectionProps) => {
               ✨ Começar o Quiz gratuito
             </button>
             <p className="text-sm text-muted-foreground">✅ Gratuito • Leva apenas 2 minutinhos</p>
-          </div>
-          <div className="flex-1">
-            <img
-              src={heroImage}
-              alt="Mãe ajudando criança a se comunicar"
-              width={800}
-              height={800}
-              className="rounded-3xl shadow-vivid w-full max-w-sm mx-auto border-4 border-primary/20"
-            />
           </div>
         </div>
       </div>
