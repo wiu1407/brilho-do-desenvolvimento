@@ -69,7 +69,8 @@
   }
 
   body {
-    background: linear-gradient(-45deg, hsl(45 100% 93%), hsl(270 85% 94%), hsl(330 85% 94%), hsl(24 100% 93%), hsl(140 70% 92%));
+    /* Cores marcantes do espectro TEA: Azul (Cyan/Blue), Amarelo reluzente e um leve toque Vermelho/Magenta */
+    background: linear-gradient(-45deg, hsl(195 100% 78%), hsl(220 100% 82%), hsl(45 100% 75%), hsl(340 100% 82%));
     background-size: 400% 400%;
     animation: gradient-shift 15s ease infinite;
     @apply text-foreground;
